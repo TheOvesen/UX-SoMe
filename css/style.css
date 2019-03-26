@@ -3,24 +3,6 @@
     margin: 0;
     padding: 0;
 }
-/*
-.header
-{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    background-color: #b01116;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 5;
-}
-*/
-
-.logo
-{
-    height: 200px;
-}
 
 .menu_knap
 {
@@ -39,7 +21,7 @@
     width: 85%;
 }
 
-.forside_billede
+.banner
 {
     position: relative;
     width: 100%;
@@ -47,21 +29,45 @@
     overflow: hidden;
 }
 
-.forside_billede img
+.banner img
 {
     width: 100%;
     position: absolute;
     transform: translateY(-18%);
 }
 
-.sidemenu
+.banner h1
 {
     position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #f5a40f;
+    font-family: Tahoma, sans-serif;
+    text-shadow: 2px 2px 2px black;
+}
+
+.sidemenu
+{
+    position: fixed;
     background-color: #b01116;
     left: 100%;
     transform: translateX(-100%);
     width: 15%;
     height: 100%;
+}
+
+.logo
+{
+    position: relative;
+    height: 200px;
+}
+
+.logo img
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .sidemenu a
@@ -99,4 +105,11 @@
     top: 0;
     bottom: 0; 
     width: 75%; 
+}
+
+.footer
+{
+    background-color: #f5a40f;
+    height: 50px;
+    width: 85%;
 }

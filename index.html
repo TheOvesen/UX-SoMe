@@ -8,22 +8,22 @@
         <link rel="stylesheet" href="css/style.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 
     </head>
     <body>
         <main class="main">
             <section class="hovedindhold">
-                <div class="forside_billede">
+                <div class="banner">
                     <img src="img/MDUFacade.jpg" alt="MDU's Facade">
+                    <h1>Erhvervsakademi Aarhus<br>
+                    Multimediedesigneruddannelsen</h1>
                 </div>
             </section>
             
             <aside class="sidemenu">
                 <a href="#">
                     <div class="logo">
-                        <img src="#" alt="U-Days Logo">
+                        <img src="img/U-DaysLogo.png" alt="U-Days Logo">
                     </div>
                 </a>
 
@@ -53,20 +53,10 @@
             </aside>
         </main>
 
-        <footer>
-
+        <footer class="footer">
+            buub
         </footer>
 
         <script src="js/script.js"></script>
-
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoiZWFhc2JvIiwiYSI6ImNqdGp1eDRsczB5aWQ0YWtpZ2phaTFqbDAifQ.qCQJXwwUaSApx9BE9aj2XA';
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/eaasbo/cjtjuy5vl3eku1fo59eca0gyh',
-                center: [10.149835, 56.116978],
-                zoom: 14
-            });
-        </script>
     </body>
 </html>
