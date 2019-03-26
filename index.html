@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>U-Days - MDU</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+
+    </head>
+    <body>
+        <main class="main">
+            <div id='map'></div>
+            
+            <aside class="sidemenu">
+                <a href="#">
+                    <div class="logo">
+                        <img src="#" alt="U-Days Logo">
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="sidemenu_element">
+                        <p class="sidemenu_tekst">KNAPCHEN</p>
+                    </div>
+                </a>
+                
+                <a href="#">
+                        <div class="sidemenu_element">
+                            <p class="sidemenu_tekst">KNAPCHEN</p>
+                        </div>
+                    </a>
+            </aside>
+        </main>
+
+        <footer>
+
+        </footer>
+
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZWFhc2JvIiwiYSI6ImNqdGp1eDRsczB5aWQ0YWtpZ2phaTFqbDAifQ.qCQJXwwUaSApx9BE9aj2XA';
+            const map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/eaasbo/cjtjuy5vl3eku1fo59eca0gyh',
+                center: [10.149835, 56.116978],
+                zoom: 14
+            });
+        </script>
+    </body>
+</html>
