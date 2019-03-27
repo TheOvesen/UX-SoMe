@@ -171,6 +171,7 @@
 
 .mapimg
 {
+    margin: 0;
     position: relative;
     width: 100%;
 }
