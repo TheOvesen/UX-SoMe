@@ -123,11 +123,54 @@
 
 /* -------------------------- */
 
+#pilOp, #pilNed, #pilVenstre, #pilHøjre
+{
+    position: absolute;
+    font-size: 18pt;
+    color: red;
+}
+
+#pilOp
+{
+    left: 50%;
+    top: 40%;
+}
+
+#pilNed
+{
+    left: 50%;
+    top: 60%;
+}
+
+#pilVenstre
+{
+    left: 40%;
+    top: 50%;
+}
+
+#pilHøjre
+{
+    left: 60%;
+    top: 50%;
+}
+
 .skole_navigator
 {
     position: relative;
     margin: auto;
     width: calc(100% - 100px);
-    height: 800px;
     border: 1px solid black;
+    overflow: hidden;
+}
+
+.skole_navigator div
+{
+    position: absolute;
+    width: 100%;
+}
+
+.mapimg
+{
+    position: relative;
+    width: 100%;
 }
