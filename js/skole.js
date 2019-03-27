@@ -2,7 +2,8 @@ var upArrows = $("#pilOp");
 var downArrows = $("#pilNed");
 var leftArrows = $("#pilVenstre");
 var rightArrows = $("#pilHøjre");
-var images = $(".skole_navigator img");
+//var images = $(".skole_navigator img");
+var images = $("#test");
 var container = $(".skole_navigator");
 
 var mapX = 0;
@@ -11,55 +12,52 @@ var targetX = 0;
 var targetY = 0;
 var clicked = 0;
 
-upArrows.each(function()
+upArrows.click(function() 
 {
-    addEventListener("click", function() 
-    {
-        targetY -= 1;
+    targetY -= 1;
         
-        clickArrow();
-    })
+    clickArrow();
 });
 
-downArrows.each(function()
+downArrows.click(function() 
 {
-    addEventListener("click", function() 
-    {
-        targetY += 1;
+    targetY += 1;
         
-        clickArrow();
-    })
+    clickArrow();
 });
 
-leftArrows.each(function()
+leftArrows.click(function() 
 {
-    addEventListener("click", function() 
-    {
-        targetX -= 1;
+    targetX -= 1;
         
-        clickArrow();
-    })
+    clickArrow();
 });
 
-rightArrows.each(function()
+rightArrows.click(function() 
 {
-    addEventListener("click", function() 
-    {
-        targetX += 1;
+    targetX += 1;
         
-        clickArrow();
-    })
+    clickArrow();
 });
 
 function clickArrow()
 {
     $("#test").text(targetX + "," + targetY);
 
-    //images.animate(
-    $("#test").animate(
+    images.animate(
         {
             left: container.width() * targetX + "px",
             top: container.height() * targetY + "px"
         }
     )
 }
+
+$(window).resize(function()
+{
+    images.css(
+        {
+            left: container.width() * targetX + "px",
+            top: container.height() * targetY + "px"
+        }
+    )
+});
