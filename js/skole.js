@@ -22,7 +22,7 @@ $().ready(function()
         }
     })
 
-    container.innerHeight(maxHeight);
+    container.height(maxHeight);
 
     images.css(
         {
@@ -68,8 +68,8 @@ function clickArrow()
     {
         $(this).animate(
         {
-            left: container.width() * targetX + "px",
-            top: container.height() * targetY + "px"
+            left: 100 * targetX + "%",
+            top: 100 * targetY + "%"
         });
     })
 /*
@@ -88,8 +88,8 @@ $(window).resize(function()
     {
         $(this).css(
         {
-            left: container.width() * targetX + "px",
-            top: container.height() * targetY + "px"
+            left: 100 * targetX + "%",
+            top: 100 * targetY + "%"
         });
 
         if ($(this).height() > maxHeight)
