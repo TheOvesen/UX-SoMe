@@ -5,6 +5,8 @@ var rightArrows = $("#pilHøjre");
 var images = $(".mapimg");
 //var images = $("#test");
 var container = $(".skole_navigator");
+var imgList = new Array();
+var posList = new Array();
 
 var startX = 0;
 var startY = 0;
@@ -26,8 +28,8 @@ $().ready(function()
 
     images.css(
         {
-            left: container.outerWidth() * targetX + "px",
-            top: container.outerHeight() * targetY + "px"
+            left: 100 * (startX + targetX) + "%",
+            top: 100 * (startX + targetY) + "%"
         }
     )
 })
@@ -68,8 +70,8 @@ function clickArrow()
     {
         $(this).animate(
         {
-            left: 100 * targetX + "%",
-            top: 100 * targetY + "%"
+            left: 100 * (startX + targetX) + "%",
+            top: 100 * (startX + targetY) + "%"
         });
     })
 /*
@@ -88,8 +90,8 @@ $(window).resize(function()
     {
         $(this).css(
         {
-            left: 100 * targetX + "%",
-            top: 100 * targetY + "%"
+            left: 100 * (startX + targetX) + "%",
+            top: 100 * (startX + targetY) + "%"
         });
 
         if ($(this).height() > maxHeight)
