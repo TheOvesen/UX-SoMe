@@ -49,6 +49,19 @@
 {
     position: relative;
     width: 85%;
+    font-family: Tahoma, sans-serif;
+}
+
+.hovedindhold_titel
+{
+    margin: 10px;
+}
+
+.hovedindhold_brodtekst
+{
+    margin: 20px;
+    color: black;
+    font-size: 14pt;
 }
 
 .banner
@@ -185,8 +198,46 @@
 {
     position: relative;
     background-color: #f5a40f;
-    height: 50px;
+    height: 10vh;
     width: 85%;
+}
+
+.footer_some
+{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: black;
+    font-size: 7vh;
+}
+
+.footer_info
+{
+    display: flex;
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: space-evenly;
+    color: black;
+    font-family: Tahoma, sans-serif;
+    font-size: 2.5vh;
+}
+
+.footer_info p
+{
+    display: inline-block;
+}
+
+.footer_some p
+{
+    font-size: 4vh;
+    font-family: Tahoma, sans-serif;
 }
 
 /* -------------------------- */
@@ -194,9 +245,10 @@
 #pilOp, #pilNed, #pilVenstre, #pilHøjre
 {
     position: absolute;
-    font-size: 18pt;
+    font-size: 30pt;
     color: red;
     z-index: 10;
+    text-shadow: 2px 2px 2px black;
 }
 
 #pilOp
@@ -250,6 +302,14 @@
 
 /* Media queries */
 
+@media only screen and (max-width: 1050px)
+{
+    .footer_info, .footer_some
+    {
+        width: 50%;
+    }
+}
+
 @media only screen and (max-width: 800px)
 {
     .sidemenu, .sidemenu *
@@ -271,5 +331,39 @@
     .header
     {
         display: block;
+    }
+
+    .footer_some
+    {
+        width: 40%;
+    }
+
+    .footer_some p
+    {
+        display: none;
+    }
+
+    .footer_info
+    {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 600px)
+{
+    .footer_info
+    {
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .footer_some
+    {
+        width: 50%;
+    }
+
+    .footer, .footer_info, .footer_some
+    {
+        height: 15vh;
     }
 }
