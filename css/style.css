@@ -246,9 +246,13 @@
 {
     position: absolute;
     font-size: 30pt;
-    color: red;
+    color: #f5a40f;
     z-index: 10;
     text-shadow: 2px 2px 2px black;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+    display: none;
+    left: -100px;
 }
 
 #pilOp
