@@ -8,6 +8,9 @@ var images = $(".mapimg");
 var container = $(".skole_navigator");
 var imgList = new Array();
 var posList = new Array();
+var infoBox = $(".info_box");
+var infoButton = $(".info_symbol");
+var infoText = "<h1>Forhallen</h1><p>Dette er synet der møder dig når du træder ind i Guldtanden. Til venstre er der reception og lærerværelse, oppe ad trapperne ligger de fleste klasseværelser, nedad ligger atriummet og kantinen, til højre et par klasseværelser, og bag dig er der borde, stole og sofaer til fri afbenyttelse.<p>";
 
 var startX = 0;
 var startY = 0;
@@ -73,6 +76,8 @@ function clickArrow()
 
     if (targetY == 0)
     {
+        var infoText = "<h1>Første sal</h1>";
+
         downArrows.css({top: "70%", left: "50%"});
 
         downArrows.show();
@@ -82,6 +87,8 @@ function clickArrow()
     {
         if (targetX == 0)
         {
+            var infoText = "<h1>Forhallen</h1><p>Dette er synet der møder dig når du træder ind i Guldtanden. Til venstre er der reception og lærerværelse, oppe ad trapperne ligger de fleste klasseværelser, nedad ligger atriummet og kantinen, til højre et par klasseværelser, og bag dig er der borde, stole og sofaer til fri afbenyttelse.<p>";
+
             downArrows.css({top: "55%", left: "70%"});
             rightArrows.css({top: "50%", left: "90%"});
             upArrows.css({top: "35%", left: "45%"});
@@ -92,6 +99,8 @@ function clickArrow()
         }
         else
         {
+            var infoText = "<h1>Bag forhallen</h1>";
+
             leftArrows.css({top: "50%", left: "10%"});
             leftArrows.show();
         }
@@ -99,6 +108,8 @@ function clickArrow()
 
     if (targetY == -2)
     {
+        var infoText = "<h1>Atriummet</h1>";
+
         downArrows.css({top: "35%", left: "70%"});
         upArrows.css({top: "75%", left: "65%"});
 
@@ -110,6 +121,8 @@ function clickArrow()
     {
         if (targetX == 0)
         {
+            var infoText = "<h1>Kantinen</h1>";
+
             upArrows.css({top: "50%", left: "10%"});
             rightArrows.css({top: "50%", left: "90%"});
 
@@ -118,6 +131,8 @@ function clickArrow()
         }
         else
         {
+            var infoText = "<h1>Spisesalen</h1>";
+
             leftArrows.css({top: "50%", left: "10%"});
 
             leftArrows.show();
@@ -132,14 +147,14 @@ function clickArrow()
             top: 100 * (startX + targetY) + "%"
         });
     })
-/*
-    images.animate(
-        {
-            left: container.width() * targetX + "px",
-            top: container.height() * targetY + "px"
-        }
-    )*/
+
+    infoBox.html(infoText);
 }
+
+infoButton.click(function()
+{
+    infoBox.toggle("fast");
+});
 
 $(window).resize(function()
 {

@@ -248,8 +248,8 @@
     position: absolute;
     font-size: 30pt;
     color: #f5a40f;
-    z-index: 10;
-    text-shadow: 2px 2px 2px black;
+    /*z-index: 10;*/
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     transform: translateX(-50%) translateY(-50%);
     cursor: pointer;
     display: none;
@@ -291,18 +291,52 @@
     line-height: 0;
 }
 
-.skole_navigator div
-{
-    position: absolute;
-    width: 100%;
-}
-
 .mapimg
 {
     margin: 0;
     position: relative;
     display: inline-block;
     width: 100%;
+}
+
+.info_symbol
+{
+    position: absolute;
+    top: 8%;
+    left: 92%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #f5a40f;
+    font-size: 7vw;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+.info_box
+{
+    display: block;
+    position: absolute;
+    width: 33%;
+    min-height: 33%;
+    top: 8%;
+    right: 8%;
+    opacity: 0.95;
+    background-color: #b01116;
+    color: white;
+    border: 2px solid white;
+    white-space: normal;
+}
+
+.info_box h1
+{
+    line-height: 2;
+    text-indent: 10%;
+    border-bottom: 1px solid white;
+}
+
+.info_box p
+{
+    line-height: 1.2;
+    padding: 2%;
 }
 
 /* Media queries */
