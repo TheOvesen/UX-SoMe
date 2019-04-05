@@ -246,7 +246,7 @@
 #pilOp, #pilNed, #pilVenstre, #pilHøjre
 {
     position: absolute;
-    font-size: 30pt;
+    font-size: 6vw;
     color: #f5a40f;
     /*z-index: 10;*/
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -306,14 +306,14 @@
     left: 92%;
     transform: translateX(-50%) translateY(-50%);
     color: #f5a40f;
-    font-size: 7vw;
+    font-size: 6vw;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     cursor: pointer;
 }
 
 .info_box
 {
-    display: block;
+    display: none;
     position: absolute;
     width: 33%;
     min-height: 33%;
